@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Image Stack Intro Animation | Demo 1 | Codrops</title>
+		<meta name="description" content="Some ideas for intro animations where an image stack moves to become a grid.">
+		<meta name="keywords" content="css, javascript, gsap, animation, uidesign, inspiration, web design">
+		<meta name="author" content="Codrops">
+		<link rel="shortcut icon" href="favicon.26242483.ico">
+		<link rel="stylesheet" href="https://use.typekit.net/lty4rfv.css">
+		<link rel="stylesheet" type="text/css" href="base.98fd6c19.css">
+		<link rel="stylesheet" type="text/css" href="demo1.ea7e4db3.css">
+		<script>document.documentElement.className = "js";
+
+var supportsCssVars = function supportsCssVars() {
+  var e,
+      t = document.createElement("style");
+  return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+};
+
+supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		
+		
+		
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script>
+  // Animación con GSAP y ScrollTrigger
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Define la animación del logotipo
+  const logoAnimation = gsap.from(".logo", {
+    opacity: 0,
+    duration: 1,
+  });
+
+  // Crea un desencadenador para iniciar la animación cuando se haga scroll
+  ScrollTrigger.create({
+    trigger: ".frame", // El elemento que activa la animación (ajusta esto según tus necesidades)
+    start: "top 50%", // Determina cuándo comienza la animación
+    end: "bottom 50%", // Determina cuándo termina la animación
+    animation: logoAnimation, // La animación que deseas reproducir
+    toggleActions: "play none none none", // Define el comportamiento de la animación (en este caso, solo se reproduce)
+  });
+</script>
+		
+		
+		
+		
+		 <style>
+    .logo {
+      position: fixed;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999; /* Puedes ajustar el valor de z-index según sea necesario */
+    }
+  </style>
+  
+  
+  
+		<div class="logo"><img src="logo.png"></div>
+		
+	</head>
+	
+	
+
+
+	<body class="loading noscroll">
+		<main data-scroll-container="">
+		
+		
+		
+			<div class="frame">
+				
+				
+				
+				
+			</div>
+			<h2 class="title" data-splitting="">New</h2>
+			<div class="gallery">
+				
+				
+				
+				
+				
+				
+	<figure class="gallery__item">
+    <div class="gallery__item-img">
+        <div class="gallery__item-imginner" style="background-image: url(1.jpg)" onclick="openLink('https://www.ebay.com/itm/394954182557')"></div>
+    </div>
+
+    <figcaption class="gallery__item-caption">
+        <h2 class="gallery__item-title" data-scroll="" data-scroll-speed="2" data-splitting="">
+            <a class="custom-link" href="https://www.ebay.com/itm/394954182557" target="_blank">Bikini</a>
+        </h2>
+        <span class="gallery__item-number">01</span>
+        <p class="gallery__item-text">Bendita Selva</p>
+        <p class="gallery__item-text">2022</p>
+    </figcaption>
+</figure>		
+				
+				
+				
+					<figure class="gallery__item">
+    <div class="gallery__item-img">
+        <div class="gallery__item-imginner" style="background-image: url(2.jpg)" onclick="openLink('https://www.ebay.com/itm/394954336099')"></div>
+    </div>
+				
+				  <figcaption class="gallery__item-caption">
+        <h2 class="gallery__item-title" data-scroll="" data-scroll-speed="2" data-splitting="">
+            <a class="custom-link" href="https://www.ebay.com/itm/394954336099" target="_blank">Tanga</a>
+        </h2>
+        <span class="gallery__item-number">02</span>
+        <p class="gallery__item-text">Bendita Selva</p>
+        <p class="gallery__item-text">2022</p>
+    </figcaption>
+</figure>
+
+
+
+				
+				
+				
+								<figure class="gallery__item">
+    <div class="gallery__item-img">
+        <div class="gallery__item-imginner" style="background-image: url(3.jpg)" onclick="openLink('https://www.ebay.com/itm/394954244883')"></div>
+    </div>
+				
+				  <figcaption class="gallery__item-caption">
+        <h2 class="gallery__item-title" data-scroll="" data-scroll-speed="2" data-splitting="">
+            <a class="custom-link" href="https://www.ebay.com/itm/394954244883" target="_blank">Hipster</a>
+        </h2>
+        <span class="gallery__item-number">03</span>
+        <p class="gallery__item-text">Bendita Selva</p>
+        <p class="gallery__item-text">2023</p>
+    </figcaption>
+</figure>	
+				
+				
+				
+				
+		
+		
+		
+						
+								<figure class="gallery__item">
+    <div class="gallery__item-img">
+        <div class="gallery__item-imginner" style="background-image: url(4.jpg)" onclick="openLink('https://www.ebay.com/itm/394954283875')"></div>
+    </div>
+				
+				  <figcaption class="gallery__item-caption">
+        <h2 class="gallery__item-title" data-scroll="" data-scroll-speed="2" data-splitting="">
+            <a class="custom-link" href="https://www.ebay.com/itm/394954283875" target="_blank">Bikini</a>
+        </h2>
+        <span class="gallery__item-number">04</span>
+        <p class="gallery__item-text">Bendita Selva</p>
+        <p class="gallery__item-text">2023</p>
+    </figcaption>
+</figure>	
+		
+		
+		
+		
+		
+		
+		
+		
+							
+								<figure class="gallery__item">
+    <div class="gallery__item-img">
+        <div class="gallery__item-imginner" style="background-image: url(5.jpg)" onclick="openLink('https://www.ebay.com/itm/394954312585')"></div>
+    </div>
+				
+				  <figcaption class="gallery__item-caption">
+        <h2 class="gallery__item-title" data-scroll="" data-scroll-speed="2" data-splitting="">
+            <a class="custom-link" href="https://www.ebay.com/itm/394954312585" target="_blank">Tanga</a>
+        </h2>
+        <span class="gallery__item-number">05</span>
+        <p class="gallery__item-text">Bendita Selva</p>
+        <p class="gallery__item-text">2023</p>
+    </figcaption>
+</figure>
+
+
+		
+		
+		
+			</div>
+		</main>
+		<svg class="cursor" width="30" height="30" viewBox="0 0 30 30">
+			<circle class="cursor__inner" cx="15" cy="15" r="7.5"></circle>
+		</svg>
+		
+		<script>
+// Función para abrir el enlace en una nueva ventana al hacer clic en la imagen
+function openLink(link) {
+    window.open(link);
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+		<script src="demo1.151408fb.js"></script>
+		
+	</body>
+</html>
