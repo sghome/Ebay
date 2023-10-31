@@ -42,7 +42,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
   ScrollTrigger.create({
     trigger: ".frame", // El elemento que activa la animación (ajusta esto según tus necesidades)
     start: "top 50%", // Determina cuándo comienza la animación
-    end: "bottom 50%", // Determina cuándo termina la animación
+    end: "bottom 5%", // Determina cuándo termina la animación
     animation: logoAnimation, // La animación que deseas reproducir
     toggleActions: "play none none none", // Define el comportamiento de la animación (en este caso, solo se reproduce)
   });
@@ -67,13 +67,29 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
         }
 
         .logo.minimized {
-            max-width: 100px; /* Tamaño más pequeño cuando se hace scroll */
+            max-width: 100%; /* Tamaño más pequeño cuando se hace scroll */
         }
 
         .logo.hidden {
             display: none; /* Ocultar el logotipo cuando se hace scroll */
         }
     </style>
+  
+  
+  
+  
+  
+      <style>
+        /* Establece el fondo del cuerpo y del HTML para que la imagen no se repita */
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: url(https://images.unsplash.com/photo-1530176928500-2372a88e00b5?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+    
+    
   
   
 		<div class="logo"><img src="logo.png"></div>
@@ -94,7 +110,8 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 				
 				
 			</div>
-			<h2 class="title" data-splitting="">New</h2>
+		
+			<h2 class="title" data-splitting="">Welcome</h2>
 			<div class="gallery">
 				
 				
@@ -222,17 +239,26 @@ function openLink(link) {
 
 
 
-<script>
-    // Detectar el desplazamiento y aplicar estilos al logotipo
-    window.addEventListener("scroll", function () {
+    <script>
+        // Detectar el desplazamiento y aplicar estilos al logotipo
         const logo = document.querySelector(".logo");
-        if (window.scrollY > 100) { // Ajusta el valor según sea necesario
-            logo.classList.add("minimized");
-        } else {
-            logo.classList.remove("minimized");
-        }
-    });
-</script>
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 100) { // Ajusta el valor según sea necesario
+                logo.classList.add("minimized");
+            } else {
+                logo.classList remove("minimized");
+            }
+        });
+
+        // Animación de fondo con GSAP y ScrollTrigger
+        gsap.to('body', {
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                scrub: 1,
+            },
+        });
+    </script>
 
 
 
