@@ -240,14 +240,14 @@ function openLink(link) {
 
 
 
-    <script>
-        // Detectar el desplazamiento y aplicar estilos al logotipo
+   <script>
+        // Detectar el desplazamiento y ocultar el logotipo
         const logo = document.querySelector(".logo");
         window.addEventListener("scroll", function () {
             if (window.scrollY > 100) { // Ajusta el valor según sea necesario
-                logo.classList.add("minimized");
+                logo.classList.add("hidden");
             } else {
-                logo.classList remove("minimized");
+                logo.classList.remove("hidden");
             }
         });
 
