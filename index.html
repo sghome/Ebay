@@ -51,16 +51,29 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 		
 		
 		
-		 <style>
-    .logo {
-      position: fixed;
-      top: 10%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 999; /* Puedes ajustar el valor de z-index según sea necesario */
-    }
-  </style>
-  
+<style>
+        .logo {
+            position: fixed;
+            top: 10px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            transition: all 0.3s;
+        }
+
+        .logo img {
+            max-width: 200px; /* Ajusta el tamaño del logotipo según tus necesidades */
+            height: auto;
+        }
+
+        .logo.minimized {
+            max-width: 100px; /* Tamaño más pequeño cuando se hace scroll */
+        }
+
+        .logo.hidden {
+            display: none; /* Ocultar el logotipo cuando se hace scroll */
+        }
+    </style>
   
   
 		<div class="logo"><img src="logo.png"></div>
@@ -209,6 +222,17 @@ function openLink(link) {
 
 
 
+<script>
+    // Detectar el desplazamiento y aplicar estilos al logotipo
+    window.addEventListener("scroll", function () {
+        const logo = document.querySelector(".logo");
+        if (window.scrollY > 100) { // Ajusta el valor según sea necesario
+            logo.classList.add("minimized");
+        } else {
+            logo.classList.remove("minimized");
+        }
+    });
+</script>
 
 
 
