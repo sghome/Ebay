@@ -53,6 +53,19 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 		
 		
 <style>
+
+
+
+   /* Establece el fondo del cuerpo y del HTML para que la imagen no se repita */
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: url(https://images.unsplash.com/photo-1530176928500-2372a88e00b5?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center fixed;
+            background-size: cover;
+        }
+        
+        
+        
         .logo {
             position: fixed;
             top: 10px; /* Ajusta la distancia desde la parte superior según tus necesidades */
@@ -80,16 +93,6 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
   
   
   
-      <style>
-        /* Establece el fondo del cuerpo y del HTML para que la imagen no se repita */
-        html, body {
-            margin: 0;
-            padding: 0;
-            background: url(https://images.unsplash.com/photo-1530176928500-2372a88e00b5?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center fixed;
-            background-size: cover;
-        }
-    </style>
-    
     
   
   
@@ -112,7 +115,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 				
 			</div>
 		
-			<h2 class="title" data-splitting="">Welcome</h2>
+			<h2 class="title" data-splitting=""></h2>
 			<div class="gallery">
 				
 				
@@ -245,13 +248,13 @@ function openLink(link) {
         const logo = document.querySelector(".logo");
         window.addEventListener("scroll", function () {
             if (window.scrollY > 100) { // Ajusta el valor según sea necesario
-                logo.classList.add("hidden");
+                logo.style.opacity = "0";
             } else {
-                logo.classList.remove("hidden");
+                logo.style.opacity = "1";
             }
         });
 
-        // Animación de fondo con GSAP y ScrollTrigger
+        // Animación de fondo con GSAP y ScrollTrigger (si lo deseas)
         gsap.to('body', {
             scrollTrigger: {
                 trigger: "body",
